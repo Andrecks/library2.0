@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>{% block title %}библиотека{% endblock %}</title>
+    <!-- Загрузка статики -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+  </head>
+    <div class="d-flex justify-content-between align-items-center">
+      </div>
+    </div>
+    </div>
+    </div>
+
+
+
+
+
+
+    
+      <body>
+      {% include 'nav.html' %}
+        <main>
+          <div class="container">
+            <h1>"{{book.title}}", {{book.year}}</h1>
+            {% if book.description %}
+            <div class="card-body">
+              <p class="card-text">
+            <h2>{{ book.description }} </h2>
+            </p> </div>
+        {% endif %}
+          </div>
+        </main>
+      {% include 'footer.html'%}
+      </body>
+    
+    </html> 

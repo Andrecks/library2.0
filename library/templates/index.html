@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block title %}Библиотека{% endblock %}
+{% block header %}Все книги{% endblock %}
+{% block content %}
+{% for book in books %}
+<h3>
+    <a href="{% url 'book' book.id %}">{{ book.title }}, {{ book.year }}</a>
+</h3>
+{% endfor %}
+{% endblock %}
